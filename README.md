@@ -3,16 +3,17 @@ Smart-Home Controll
 
 # Nginx-Config with open-ssl Certificate
 - /etc/nginx/sites-enabled: 
-
+```
 server {
         listen                          80;
         server_name                     192.168.1.$;
         return 301                      https://$server_name$request_uri;
 }
+
 server {
         listen                          443 ssl;
         server_name                     192.168.1.$;
-
+        
         ssl_certificate                 /etc/ssl/openhab.crt;
         ssl_certificate_key             /etc/ssl/openhab.key;
 
@@ -26,6 +27,7 @@ server {
         }
 
 }
+```
 
 # Photos of my self-made case
 ![Photo](Docs/pi_1.jpg)
